@@ -11,6 +11,7 @@
             "program": "${workspaceRoot}/app.js",
             "cwd": "${workspaceRoot}",
             "sourceMaps": true,
+            "preLaunchTask": "build",
             "outFiles": [
                 "${workspaceRoot}/_build/**/*.js"
             ],
