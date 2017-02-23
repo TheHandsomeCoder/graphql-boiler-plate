@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const nodeEnv = process.env.NODE_ENV || 'production';
 
 module.exports = {
@@ -13,15 +14,12 @@ module.exports = {
         loaders: [{
             test: /\.js&/,
             exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-                presets: ['es2015-native-modules']
-            }
+            loader: 'babel-loader'
         }]
     },
     plugins: [
         // uglify js
-        new webpack.optimize.UglifyJsPlugin({
+        new UglifyJSPlugin({
             compress: { warnings: false },
             output: { comments: false },
             sourceMap: true
@@ -31,4 +29,4 @@ module.exports = {
             'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
         })
     ]
-}
+};
