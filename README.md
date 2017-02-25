@@ -1,1 +1,1 @@
-"# webpack-boiler-plate" 
+# graphql-boiler-plate
