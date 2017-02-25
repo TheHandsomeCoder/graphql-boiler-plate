@@ -4,17 +4,26 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack --progress"
+    "build": "webpack --progress --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "graphql": "^0.9.1",
+    "graphql-server-express": "^0.6.0",
+    "graphql-subscriptions": "^0.2.0",
+    "graphql-tools": "^0.10.0",
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015-native-modules": "^6.9.4",
     "eslint": "^3.16.0",
-    "lodash": "^4.17.4",
     "uglify-js": "git://github.com/mishoo/UglifyJS2.git#harmony",
     "uglifyjs-webpack-plugin": "^0.2.1",
     "webpack": "^2.2.1"

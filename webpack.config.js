@@ -4,6 +4,7 @@ const nodeEnv = process.env.NODE_ENV || 'production';
 
 module.exports = {
     devtool: 'source-map',
+    target: 'node',
     entry: {
         filename: './app.js'
     },
