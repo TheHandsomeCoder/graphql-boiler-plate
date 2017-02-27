@@ -26,7 +26,8 @@ module.exports = {
         new UglifyJSPlugin({
             compress: { warnings: false },
             output: { comments: false },
-            sourceMap: true
+            sourceMap: true,
+            mangle: false
         }),
         //env plugin
         new webpack.DefinePlugin({
